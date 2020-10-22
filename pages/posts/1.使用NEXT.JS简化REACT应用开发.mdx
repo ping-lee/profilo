@@ -1,0 +1,58 @@
+## 关于Next.js
+
+白手起家开发REACT应用，有很多的细节你需要注意到：
+- 代码被像webpack的捆绑器捆绑在一起，并且使用像Babel的编译器转换过一遍。
+- 你必须做生成环境下的代码优化比如代码分割。
+- 为了呈现和SEO你可能需要预先静态渲染一些页面，你还可能使用到服务端渲染或者客户端渲染。
+- 你可能必须写一些服务端的代码以连接REACT应用和数据源。
+
+一个框架可以解决这些问题，但这样的框架必须是轻量级的抽象，否则它不会有很高的可用性。同时它应该具有良好的“开发体验”，以保证你和你的团队在编码时有神奇的体验。
+
+Next.js具有这些特性：
+- 居于pages路径直观的路由系统，同时支持动态路由。
+- 每页都支持预渲染，包括静态生成（SSG）和服务端渲染（SSR）。
+- 快速页面加载的自动代码分割。
+- 内置CSS和Sass支持，以及任何CSS-in-JS库。
+- 开发环境快速刷新支持。
+- API路由以搭建API端点。
+- 完全可扩展。
+
+## 开始
+
+系统要求Node的版本至少要在10.13以上，支持MacOS，Windows和Linux。在你的项目中安装`next`，`react`，和`react-dom`：
+
+```bash
+npm install next react react-dom
+# or
+yarn add next react react-dom
+```
+
+打开`package.json`在`scripts`的地方添加如下：
+
+```js
+"scripts": {
+  "dev": "next dev",
+  "build": "next build",
+  "start": "next start"
+}
+```
+- `dev` - 启动next开发模式
+- `build` - 编译生成生产环境下的应用
+- `start` - 启动生产环境应用
+
+Create a pages directory inside your project.
+
+Populate ./pages/index.js with the following contents:
+
+```js
+function HomePage() {
+  return <div>Welcome to Next.js!</div>
+}
+
+export default HomePage
+```
+
+To start developing your application run npm run dev or yarn dev. This starts the development server on http://localhost:3000.
+
+Visit http://localhost:3000 to view your application.
+

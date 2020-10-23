@@ -83,7 +83,7 @@ const Sidebar = ({ routes, headingSelector, getTitle, getDepth, }) => {
           letterSpacing="wider"
           color={useColorModeValue("gray.700", "inherit")}
         >
-          <Icon as={FaRegBookmark} mr="0.5em" />
+          <Icon as={FaRegBookmark} mr="1em" />
           {tocTitle}
         </chakra.h4>
       )}

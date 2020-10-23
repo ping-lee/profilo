@@ -77,7 +77,7 @@ import {
             <NavLink href="/team">团队</NavLink>
             <NavLink href="/enterprise-support"> 支持</NavLink>
           </HStack>
-          <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="full">
+          <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="xs">
             <DrawerOverlay>
               <DrawerContent>
                 <DrawerCloseButton />

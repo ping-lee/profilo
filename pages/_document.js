@@ -9,9 +9,16 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <link
+              rel="preload"
+              href="/fonts/Inter.woff2"
+              as="font"
+              type="font/woff2"
+              crossOrigin="anonymous"
+          />
+        </Head>
         <body>
-          {/** 由浏览器决定夜间模式 */}
           <ColorModeScript initialColorMode="light" />
           <Main />
           <NextScript />

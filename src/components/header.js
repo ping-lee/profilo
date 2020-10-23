@@ -14,6 +14,7 @@ import {
     DrawerOverlay,
     DrawerContent,
     useDisclosure,
+    DrawerCloseButton,
   } from "@chakra-ui/core"
   import siteConfig from "configs/site-config"
   import NextLink from "next/link"
@@ -51,7 +52,7 @@ import {
         <Flex align="center">
           <NextLink href="/" passHref>
             <chakra.a display={{ base: "none", md: "block" }} aria-label="Chakra UI, Back to homepage">
-              Logo
+              LP
             </chakra.a>
           </NextLink>
           <Box display={{ base: "block", xl: "none" }}>
@@ -61,7 +62,6 @@ import {
               aria-label={`Switch to ${text} mode`}
               variant="ghost"
               color="current"
-              ml="3"
               onClick={onOpen}
               icon={<FaBars />}
             />
@@ -72,18 +72,19 @@ import {
             ml="24px"
             display={{ base: "none", md: "flex" }}
           >
-            <NavLink href="/docs/getting-started">文档</NavLink>
-            <NavLink href="/guides/integrations/with-cra">指南</NavLink>
+            <NavLink href="/posts/tech/template">文档</NavLink>
+            <NavLink href="/posts/tech/get-start">指南</NavLink>
             <NavLink href="/team">团队</NavLink>
             <NavLink href="/enterprise-support"> 支持</NavLink>
           </HStack>
-          <Drawer placement="left" onClose={onClose} isOpen={isOpen}>
+          <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="full">
             <DrawerOverlay>
               <DrawerContent>
+                <DrawerCloseButton />
                 <DrawerHeader borderBottomWidth="1px">木子李</DrawerHeader>
                 <DrawerBody>
-                <NavLink href="/docs/getting-started">文档</NavLink>
-                <NavLink href="/guides/integrations/with-cra">指南</NavLink>
+                <NavLink href="/posts/tech/template">文档</NavLink>
+                <NavLink href="/posts/tech/get-start">指南</NavLink>
                 <NavLink href="/team">团队</NavLink>
                 <NavLink href="/enterprise-support"> 支持</NavLink>
                 </DrawerBody>

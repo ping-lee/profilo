@@ -3,7 +3,7 @@ import {
 } from '@chakra-ui/core'
 import SEO from "@components/seo"
 import Header from "@components/header"
-import Fotter from "@components/fotter"
+import Footer from "@components/footer"
 function HomePage() {
   return (
     <>
@@ -15,7 +15,7 @@ function HomePage() {
       <Box mb={20}>
         <Box as="section" pt="12rem" pb="6rem">
         </Box>
-        <Fotter />
+        <Footer />
       </Box>
     </>
   )

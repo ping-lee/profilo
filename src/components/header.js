@@ -81,7 +81,7 @@ import {
             <DrawerOverlay>
               <DrawerContent>
                 <DrawerCloseButton />
-                <DrawerHeader borderBottomWidth="1px">木子李</DrawerHeader>
+                <DrawerHeader borderBottomWidth="1px">lee-ping</DrawerHeader>
                 <DrawerBody>
                 <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/photo">图片</NavLink>

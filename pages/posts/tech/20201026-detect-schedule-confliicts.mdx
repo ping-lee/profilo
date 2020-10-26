@@ -22,10 +22,12 @@ excerpt: 数据处理的方式多种多样，把数据导进数据库编写视�
 ## 示例
 
 ```sql
-CREATE OR REPLACE VIEW jskx1026_v AS
+CREATE OR REPLACE VIEW 
+jskx1026_v AS
 SELECT standard_hash(t.教室名||
-t.上课周次||t.星期||t.节次||t.课程编号||
-t.教工号, 'MD5') AS hashkey,
+t.上课周次||t.星期||t.节次||
+t.课程编号||t.教工号, 'MD5') 
+AS hashkey,
 t.通知单, t.教室名, t.上课周次, 
 t.星期, t.节次, t.课程编号, t.教工号
 FROM JSKX1026 t;
@@ -40,7 +42,7 @@ FROM JSKX1026 t;
 
 ```sql
 WITH confilicts AS
- (SELECT t.hashkey, count(*) AS cnt
+ (SELECT t.hashkey, count(*) cnt
     FROM JSKX1026_V t
    GROUP BY t.hashkey
   HAVING count(*) > 1)

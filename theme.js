@@ -6,7 +6,7 @@ const customTheme = extendTheme({
     global: (props) => ({
       body: {
         color: mode("gray.700", "whiteAlpha.900")(props),
-        fontFamily: "Inter, sans-serif",
+        fontFamily: "PingFangSC-Regular, sans-serif",
         ".deleted": {
           color: "#ff8383 !important",
           fontStyle: "normal !important",

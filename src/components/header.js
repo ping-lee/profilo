@@ -21,7 +21,7 @@ import {
   import React from "react"
   import { FaMoon, FaSun, FaAlignLeft, FaBars } from "react-icons/fa"
   import NavLink from "./header-nav-link"
-  
+
   const DiscordIcon = (props) => (
     <svg viewBox="0 0 146 146" {...props}>
       <path
@@ -72,10 +72,10 @@ import {
             ml="24px"
             display={{ base: "none", md: "flex" }}
           >
-            <NavLink href="/posts/tech/template">文档</NavLink>
-            <NavLink href="/posts/tech/get-start">指南</NavLink>
-            <NavLink href="/team">团队</NavLink>
-            <NavLink href="/enterprise-support"> 支持</NavLink>
+            <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/photo">图片</NavLink>
+            <NavLink href="/about">关于</NavLink>
+            <NavLink href="/contact">联系</NavLink>
           </HStack>
           <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="xs">
             <DrawerOverlay>
@@ -83,10 +83,10 @@ import {
                 <DrawerCloseButton />
                 <DrawerHeader borderBottomWidth="1px">木子李</DrawerHeader>
                 <DrawerBody>
-                <NavLink href="/posts/tech/template">文档</NavLink>
-                <NavLink href="/posts/tech/get-start">指南</NavLink>
-                <NavLink href="/team">团队</NavLink>
-                <NavLink href="/enterprise-support"> 支持</NavLink>
+                <NavLink href="/blog">Blog</NavLink>
+                <NavLink href="/photo">图片</NavLink>
+                <NavLink href="/about">关于</NavLink>
+                <NavLink href="/contact">联系</NavLink>
                 </DrawerBody>
               </DrawerContent>
             </DrawerOverlay>

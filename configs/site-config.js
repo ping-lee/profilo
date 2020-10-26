@@ -26,8 +26,8 @@ const siteConfig = {
     url: "https://discord.gg/dQHfcWF",
   },
   seo: {
-    title: "Chakra UI",
-    titleTemplate: "%s - Chakra UI",
+    title: "tristan",
+    titleTemplate: "%s - tristan",
     description:
       "Simple, Modular and Accessible UI Components for your React Applications.",
     siteUrl: "https://chakra-ui.com",

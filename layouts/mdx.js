@@ -11,7 +11,7 @@ import { findRouteByPath, removeFromLast } from "@utils/find-route-by-path"
 import { getRouteContext } from "@utils/get-route-context"
 
 function MDXLayout({ frontmatter, children }) {
-  const { slug } = frontmatter
+  const { slug, showToc } = frontmatter
 
   const config = slug.startsWith("/guides") ? guidesSidebar : docsSidebar
   const { routes } = config
@@ -23,7 +23,7 @@ function MDXLayout({ frontmatter, children }) {
     <MDXProvider components={{ ...chakraComponents, ...MDXComponents }}>
       <PageContainer
         frontmatter={frontmatter}
-        sidebar={<Sidebar routes={routes} />}
+        sidebar={ showToc ? <Sidebar routes={routes}/> : null}
         pagination={
           <Pagination
             next={routeContext.nextRoute}

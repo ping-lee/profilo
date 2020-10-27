@@ -15,6 +15,8 @@ import {
   DrawerContent,
   useDisclosure,
   DrawerCloseButton,
+  Avatar,
+  Text,
 } from "@chakra-ui/core"
 import siteConfig from "configs/site-config"
 import NextLink from "next/link"
@@ -81,7 +83,12 @@ import NavLink from "./header-nav-link"
             <DrawerOverlay>
               <DrawerContent>
                 <DrawerCloseButton />
-                <DrawerHeader borderBottomWidth="1px">lee-ping</DrawerHeader>
+                <DrawerHeader borderBottomWidth="1px">
+                  <HStack>
+                    <Avatar size="md" mr="10px" name="lee ping" src="./lee-ping.jpg" />{" "}
+                    <Text>lee-ping</Text>
+                  </HStack>
+                </DrawerHeader>
                 <DrawerBody>
                 <NavLink href="/blog">博客</NavLink>
                 <NavLink href="/photo">图片</NavLink>

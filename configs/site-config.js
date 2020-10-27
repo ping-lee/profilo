@@ -1,4 +1,4 @@
-const baseUrl = "https://github.com/chakra-ui/chakra-ui"
+const baseUrl = "https://github.com/ping-lee"
 
 const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Segun Adebayo. All Rights Reserved.`,

@@ -1,9 +1,8 @@
 import React from "react"
 import { Box, Icon, Text, Stack, Link, chakra } from "@chakra-ui/core"
-import { IoLogoTwitter, IoLogoLinkedin } from "react-icons/io"
-import { MdEmail } from "react-icons/md"
-import { DiGithubBadge } from "react-icons/di"
-
+import { FaGithub, FaQq } from "react-icons/fa"
+import { SiWechat } from "react-icons/si"
+import { GrMail } from "react-icons/gr"
 
 const FooterLink = ({ icon, href, label }) => (
   <Link display="inline-block" href={href} aria-label={label} isExternal>
@@ -13,29 +12,29 @@ const FooterLink = ({ icon, href, label }) => (
 
 const links = [
   {
-    icon: DiGithubBadge,
+    icon: FaGithub,
     label: "GitHub",
-    href: "https://github.com/segunadebayo",
+    href: "https://github.com/ping-lee",
   },
   {
-    icon: IoLogoTwitter,
-    label: "Twitter",
-    href: "https://twitter.com/thesegunadebayo",
+    icon: FaQq,
+    label: "qq",
+    href: "http://wpa.qq.com/msgrd?v=3&uin=1179320194&site=qq&menu=yes",
   },
   {
-    icon: IoLogoLinkedin,
-    label: "LinkedIn",
-    href: "https://linkedin.com/in/thesegunadebayo/",
+    icon: SiWechat,
+    label: "wechat",
+    href: "https://u.wechat.com/ELF_GII1Ci-5vxthMKbxTbc",
   },
   {
-    icon: MdEmail,
-    label: "Email",
-    href: "mailto:sage@adebayosegun.com",
+    icon: GrMail,
+    label: "Gmail",
+    href: "mailto:muzilideli@gmail.com",
   },
 ]
 export const Footer = () => (
   <Box as="footer" mt={12} textAlign="center">
-    <Text fontSize="sm">
+    <Text fontSize="md">
       <span>2020 - lee ping</span>
     </Text>
     <Stack mt={4} direction="row" spacing="12px" justify="center">

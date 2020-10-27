@@ -72,7 +72,7 @@ import NavLink from "./header-nav-link"
             ml="24px"
             display={{ base: "none", md: "flex" }}
           >
-            <NavLink href="/blog">Blog</NavLink>
+            <NavLink href="/blog">博客</NavLink>
             <NavLink href="/photo">图片</NavLink>
             <NavLink href="/about">关于</NavLink>
             <NavLink href="/contact">联系</NavLink>
@@ -83,7 +83,7 @@ import NavLink from "./header-nav-link"
                 <DrawerCloseButton />
                 <DrawerHeader borderBottomWidth="1px">lee-ping</DrawerHeader>
                 <DrawerBody>
-                <NavLink href="/blog">Blog</NavLink>
+                <NavLink href="/blog">博客</NavLink>
                 <NavLink href="/photo">图片</NavLink>
                 <NavLink href="/about">关于</NavLink>
                 <NavLink href="/contact">联系</NavLink>

@@ -9,17 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <link
-              rel="preload"
-              href="/fonts/Inter.woff2"
-              as="font"
-              type="font/woff2"
-              crossOrigin="anonymous"
-          />
-        </Head>
+        <Head/>
         <body>
-          <ColorModeScript initialColorMode="light" />
+          <ColorModeScript  useSystemColorMode="false" />
           <Main />
           <NextScript />
         </body>

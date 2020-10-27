@@ -21,6 +21,7 @@ const NavLink = (props) => {
         transition="all 0.2s"
         color={useColorModeValue("gray.600", "whiteAlpha.800")}
         fontWeight="normal"
+        fontSize="18px"
         _hover={{ bg: useColorModeValue("gray.100", "whiteAlpha.100") }}
         _activeLink={{
           fontWeight: "semibold",

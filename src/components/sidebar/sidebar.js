@@ -76,12 +76,12 @@ const Sidebar = ({ routes, headingSelector, getTitle, getDepth, }) => {
     >
       {tocTitle && (
         <chakra.h4
-          fontSize="sm"
           fontWeight="bold"
+          fontSize="18px" 
+          color="hsl(333deg,100%,45%)"
           m={0}
           textTransform="uppercase"
           letterSpacing="wider"
-          color={useColorModeValue("gray.700", "inherit")}
         >
           <Icon as={FaRegBookmark} mr="1em" />
           {tocTitle}

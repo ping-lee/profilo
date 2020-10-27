@@ -96,10 +96,10 @@ const MDXComponents = {
   th: THead,
   td: TData,
   a: (props) => <chakra.a apply="mdx.a" {...props} />,
-  p: (props) => <chakra.p apply="mdx.p" fontSize="18px" {...props} />,
+  p: (props) => <chakra.p apply="mdx.p" fontSize="19px" {...props} />,
   ul: (props) => <chakra.ul apply="mdx.ul" {...props} />,
   ol: (props) => <chakra.ol apply="mdx.ul" {...props} />,
-  li: (props) => <chakra.li pb="4px" {...props} />,
+  li: (props) => <chakra.li pb="4px" {...props} fontSize="18px" />,
   blockquote: (props) => (
     <Alert
       mt="4"

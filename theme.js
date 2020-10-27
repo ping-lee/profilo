@@ -145,7 +145,6 @@ const customTheme = extendTheme({
     },
   },
   useSystemColorMode: true,
-  initialColorMode: "light",
 })
 
 export default customTheme

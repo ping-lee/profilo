@@ -14,7 +14,7 @@ const PageContainer = ({
   sidebar,
   pagination,
 }) => {
-  const { title, description, editUrl } = frontmatter
+  const { title, subtitle, description, editUrl } = frontmatter
 
   return (
     <>
@@ -28,7 +28,20 @@ const PageContainer = ({
             <SkipNavContent />
             <Box pt={3} px={5} mt="4.5rem" mx="auto" minH="80vh" maxW={["355px", "700px", "800px", "70%"]}>
               <PageTransition>
-                <chakra.h1 apply="mdx.h1">{title}</chakra.h1>
+                <chakra.h1 
+                  apply="mdx.h1" 
+                  fontSize="38px"
+                  textAlign={{base: "left", md: "center", xl: "center"}} 
+                  mt="0"
+                  fontFamily="PingFangSC-Semibold"
+                >{title}</chakra.h1>
+                <chakra.h2 
+                  apply="mdx.h2" 
+                  textAlign={{base: "left", md: "center", xl: "center"}} 
+                  mt="16px" 
+                  fontSize="24px"
+                  color="hsl(225deg,15%,50%)"
+                >{subtitle}</chakra.h2>
                 {children}
               </PageTransition>
               <Box mt="40px">{editUrl && <EditPageLink href={editUrl} />}</Box>

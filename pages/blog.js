@@ -44,10 +44,10 @@ import {
                 xl: "2fr 1fr",
               }} gap="64px 96px">
                 <Stack>
-                  <chakra.h3 mt="48px" fontSize="18px" color="hsl(333deg,100%,45%)">最近发布</chakra.h3>
+                  <chakra.h3 mt="40px" fontSize="18px" color="hsl(333deg,100%,45%)">最近发布</chakra.h3>
                   {postsPages.map((post, i) =><Preview key={i} post={post} />)}
                 </Stack>
-                <Box mt="48px">
+                <Box mt="40px" display={{ base: "none", xl: "block" }}>
                 <chakra.h3 fontSize="18px" color="hsl(333deg,100%,45%)">热门分类</chakra.h3>
                   <Divider orientation="horizontal" />
                   <Box>2</Box>

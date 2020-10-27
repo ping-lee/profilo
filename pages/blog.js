@@ -1,6 +1,8 @@
 import {
     Box, Grid,
-    chakra
+    chakra,
+    Divider,
+    Stack,
   } from '@chakra-ui/core'
   import { StarIcon } from '@chakra-ui/icons'
   import SEO from "@components/seo"
@@ -14,13 +16,13 @@ import {
   const Preview = ({ post }) => (
     <Link href={post.slug}>
       <a>
-        <Box display="block" mt="48px">
+        <Box display="block" mb="48px">
           <chakra.article>
-            <chakra.h4 fontSize="22px">{post.title}</chakra.h4>
-            <chakra.h6 fontSize="17px">{post.subtitle}</chakra.h6>
-            <chakra.p fontSize="16px" mt="16px">{post.excerpt}</chakra.p>
+            <chakra.h4 fontSize="24px" fontFamily="PingFangSC-Semibold" color="hsl(245deg,100%,60%)">{post.title}</chakra.h4>
+            <chakra.h6 fontSize="19px" color="hsl(225deg,15%,50%)">{post.subtitle}</chakra.h6>
+            <chakra.p fontSize="18px" mt="16px">{post.excerpt}</chakra.p>
             <Box w="16px" h="16px" />
-            <Box display="inline-flex" pos="relative" fontSize="16px" alignItems="center">更多</Box>
+            <Box display="inline-flex" pos="relative" fontSize="18px" alignItems="center" fontFamily="PingFangSC-Semibold">更多</Box>
           </chakra.article>
         </Box>
       </a>
@@ -41,10 +43,16 @@ import {
                 base: "1fr",
                 xl: "2fr 1fr",
               }} gap="64px 96px">
-                <Box>
+                <Stack>
+                  <chakra.h3 mt="48px" fontSize="18px" color="hsl(333deg,100%,45%)">RECENTLY PUBLISHED</chakra.h3>
                   {postsPages.map((post, i) =><Preview key={i} post={post} />)}
+                </Stack>
+                <Box mt="48px">
+                <chakra.h3 fontSize="18px" color="hsl(333deg,100%,45%)">TOP CATEGORIES</chakra.h3>
+                  <Divider orientation="horizontal" />
+                  <Box>2</Box>
                 </Box>
-                <Box mt="48px" border="1px solid red">标签分类</Box>
+                
             </Grid>
           </Box>
           <Footer />

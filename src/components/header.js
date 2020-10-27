@@ -1,26 +1,26 @@
 import {
-    chakra,
-    Flex,
-    Box,
-    HStack,
-    Icon,
-    IconButton,
-    Link,
-    useColorMode,
-    useColorModeValue,
-    Drawer,
-    DrawerBody,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    useDisclosure,
-    DrawerCloseButton,
-  } from "@chakra-ui/core"
-  import siteConfig from "configs/site-config"
-  import NextLink from "next/link"
-  import React from "react"
-  import { FaMoon, FaSun, FaAlignLeft, FaBars } from "react-icons/fa"
-  import NavLink from "./header-nav-link"
+  chakra,
+  Flex,
+  Box,
+  HStack,
+  Icon,
+  IconButton,
+  Link,
+  useColorMode,
+  useColorModeValue,
+  Drawer,
+  DrawerBody,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  useDisclosure,
+  DrawerCloseButton,
+} from "@chakra-ui/core"
+import siteConfig from "configs/site-config"
+import NextLink from "next/link"
+import React from "react"
+import { FaMoon, FaSun, FaAlignLeft, FaBars } from "react-icons/fa"
+import NavLink from "./header-nav-link"
 
   const DiscordIcon = (props) => (
     <svg viewBox="0 0 146 146" {...props}>

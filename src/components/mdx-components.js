@@ -8,8 +8,8 @@ import IconsList from "@components/icons-list"
 const Pre = (props) => <chakra.div my="2em" borderRadius="sm" {...props} />
 
 const Table = (props) => (
-  <chakra.div overflowX="auto" maxW={['330px', '530px', '80%', '100%']}>
-    <chakra.table textAlign="left" mt="32px" width="full" {...props} />
+  <chakra.div overflowX="auto" >
+    <chakra.table textAlign="left" mt="32px" {...props} />
   </chakra.div>
 )
 

@@ -31,7 +31,7 @@ function MDXLayout({ frontmatter, children }) {
           />
         }
       >
-        <div className="content">{children}</div>
+        <chakraComponents.Box className="content" m="0 auto" ml="0" mr="0">{children}</chakraComponents.Box>
       </PageContainer>
     </MDXProvider>
   )

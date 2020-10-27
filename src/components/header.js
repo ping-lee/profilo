@@ -51,7 +51,7 @@ import {
       <Flex w="100%" h="100%" px="6" align="center" justify="space-between">
         <Flex align="center">
           <NextLink href="/" passHref>
-            <chakra.a display={{ base: "none", md: "block" }} aria-label="Chakra UI, Back to homepage">
+            <chakra.a display={{ base: "none", md: "none", xl: "block" }} aria-label="Chakra UI, Back to homepage">
               LP
             </chakra.a>
           </NextLink>

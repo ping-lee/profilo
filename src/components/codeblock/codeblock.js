@@ -74,7 +74,7 @@ import {
   }
   
   const CodeContainer = (props) => (
-    <Box padding="5" rounded="8px" my="8" bg="#011627" wordBreak="keep-all" whiteSpace="pre" {...props} />
+    <Box padding="5" rounded="8px" my="8" bg="#011627" {...props} />
   )
   
   function CodeBlock(props) {

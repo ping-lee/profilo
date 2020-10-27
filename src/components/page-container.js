@@ -26,7 +26,7 @@ const PageContainer = ({
           
           <div style={{ flex: 1 }}>
             <SkipNavContent />
-            <Box pt={3} px={5} mt="4.5rem" mx="auto" maxW="48rem" minH="80vh">
+            <Box pt={3} px={5} mt="4.5rem" mx="auto" minH="80vh" maxW={["350px", "700px", "800px", "100%"]}>
               <PageTransition>
                 <chakra.h1 apply="mdx.h1">{title}</chakra.h1>
                 {children}

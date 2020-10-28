@@ -18,6 +18,7 @@ import {
   Avatar,
   Text,
 } from "@chakra-ui/core"
+import { SearchIcon } from '@chakra-ui/icons'
 import siteConfig from "configs/site-config"
 import NextLink from "next/link"
 import React from "react"
@@ -101,33 +102,20 @@ import NavLink from "./header-nav-link"
         </Flex>
   
         <Flex maxW="720px" align="center" color="gray.400">
-          <HStack spacing="5">
-            <Link isExternal aria-label="GitHub" href={siteConfig.repo.url}>
-              <Icon
-                as={GithubIcon}
-                transition="color 0.2s"
-                w="5"
-                h="5"
-                _hover={{ color: "gray.600" }}
-              />
-            </Link>
-            <Link isExternal aria-label="Discord" href={siteConfig.discord.url}>
-              <Icon
-                as={DiscordIcon}
-                transition="color 0.2s"
-                w="5"
-                h="5"
-                _hover={{ color: "gray.600" }}
-              />
-            </Link>
-          </HStack>
+          <IconButton
+              size="md"
+              ml="3"
+              fontSize="lg"
+              variant="ghost"
+              color="current"
+              icon={<SearchIcon />}
+          />
           <IconButton
             size="md"
             fontSize="lg"
             aria-label={`Switch to ${text} mode`}
             variant="ghost"
             color="current"
-            ml="3"
             onClick={toggleMode}
             icon={<SwitchIcon />}
           />

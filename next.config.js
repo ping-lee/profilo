@@ -130,6 +130,6 @@ const defaultConfig = {
 }
 
 module.exports = withPlugins(
-  [withMdxEnhanced(mdxConfig),],
+  [withMdxEnhanced(mdxConfig), ],
   defaultConfig,
 )

@@ -18,6 +18,11 @@ const customTheme = extendTheme({
       },
     }),
   },
+  colors: {
+    gray: {
+      "800": "#000",
+    }
+  },
   textStyles: {
     heading: {
       textAlign: "center",

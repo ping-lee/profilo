@@ -30,6 +30,7 @@
     "@mdx-js/react": "^1.6.19",
     "@octokit/rest": "^18.0.6",
     "babel-plugin-import-glob-array": "^0.2.0",
+    "babel-plugin-inline-react-svg": "^1.1.1",
     "date-fns": "^2.16.1",
     "execa": "^4.0.3",
     "express": "^4.17.1",

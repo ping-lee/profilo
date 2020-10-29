@@ -6,6 +6,8 @@ import {
     Stack,
     Icon,
     Text,
+    useColorModeValue,
+    useColorMode,
   } from '@chakra-ui/core'
 import { MdArrowForward } from "react-icons/md"
 import SEO from "@components/seo"
@@ -25,21 +27,21 @@ const MoreSvg = styled.svg`
   & .c1 {
       opacity: 0;
       transition: opacity 125ms ease 0s;
-      stroke: hsl(245deg, 100%, 60%);
+      stroke: ${props => props.colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg, 100%, 60%)"};
       stroke-linecap: round;
       stroke-linejoin: round;
   }
   & .c2 {
       opacity: 0;
       transition: opacity 125ms ease 0s;
-      stroke: hsl(245deg, 100%, 60%);
+      stroke: ${props => props.colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg, 100%, 60%)"};
       stroke-linecap: round;
       stroke-linejoin: round;
   }
   & .c3 {
       opacity: 0;
       transition: opacity 125ms ease 125ms;
-      stroke: hsl(245deg, 100%, 60%);
+      stroke: ${props => props.colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg, 100%, 60%)"};
       stroke-linecap: round;
       stroke-linejoin: round;
       stroke-opacity: 0.66;
@@ -62,7 +64,7 @@ const PreviewLink = styled.a`
     }
 
     .c0-title {
-      color: hsl(245deg,100%,60%);
+      color: ${props => props.colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg,100%,60%)"} ;
     }
   }
 
@@ -81,9 +83,9 @@ const PreviewMore = styled(HStack)`
     & .c4 {opacity: 1;transition: opacity 0s ease 250ms;}
   }
 `
-const Preview = ({ post }) => (
+const Preview = ({ post, colorMode }) => (
     <Link href={post.slug}>
-      <PreviewLink>
+      <PreviewLink colorMode={colorMode}>
         <Box display="block" mb="48px">
           <chakra.article cursor="pointer">
             <chakra.h4 className="c0-title" fontSize="24px" fontFamily="PingFangSC-Semibold">{post.title}</chakra.h4>
@@ -93,7 +95,7 @@ const Preview = ({ post }) => (
             <PreviewMore>
               <Box display="inline-flex" pos="relative" fontSize="18px" alignItems="center" fontFamily="PingFangSC-Semibold">更多</Box>
               <Box m="0px!important" w="8px" h="8px"></Box>
-              <MoreSvg>
+              <MoreSvg colorMode={colorMode}>
                 <path className="c1" d="M0.75 6H11.25 M6 0.75L11.25 6L6 11.25"></path>
                 <path className="c2" d="M15 10L19.5 5.5L15 1"></path>
                 <path className="c3" d="M23 10L27.5 5.5L23 1"></path>
@@ -180,30 +182,13 @@ const PopContent = ({ pop }) => (
   </PopuLink>
 )
 
-const HeroWrapper = styled.div`
-  overflow: hidden;
-  display: block;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  width: 100%;
-  height: 100%;
-  transform: translateY(1px);
-  z-index: 3;
-`
-const HeroSvg = styled.svg`
-  position: absolute;
-  margin-left: 50px;
-  width: 120%;
-  display: block;
-`
-const Hero = () => (
-  <HeroSvg>
-    <path d="M456.464 0.0433865C277.158 -1.70575 0 50.0141 0 50.0141V74H1440V50.0141C1440 50.0141 1320.4 31.1925 1243.09 27.0276C1099.33 19.2816 1019.08 53.1981 875.138 50.0141C710.527 46.3727 621.108 1.64949 456.464 0.0433865Z"></path>
-  </HeroSvg>
-) 
+//import Cat from '../svgs/cat.svg'
+import BgWave from '../svgs/bg-wave.svg'
+
 function BlogPage() {
+  const { colorMode } = useColorMode()
+  const hbg = useColorModeValue("hsl(204deg,67%,85%)", "hsla(200deg,100%,85%,0.1)")
+  const gtext = useColorModeValue("hsl(333deg,100%,45%)", "hsl(230deg,92%,63%)")
   let tags = ["SQL", "维杀杀杀护", "SQL", "维杀杀杀护", "SQ地点L", "维地点护", "SQ达到顶峰L", "维实打实大苏打护"]
   return (
     <>
@@ -212,8 +197,10 @@ function BlogPage() {
         description="hahaha"
       />
       <Header/>
-      <Box position="relative" w="100%"  h="200px" background="hsl(204deg,67%,85%)">
-      </Box>
+      <Stack position="relative" w="100%" mt="4.5rem">
+        <Box w={{base: "100%", md: "100%", xl: "100%"}} h="120px" background={hbg}>something here</Box>
+        <BgWave style={{bottom: '0px', marginTop: "0px", fill: hbg}} />
+      </Stack>
       <Container>
         <Box pt={3} mt="4.5rem" mx="32px" maxW="1100px">
             <Grid templateColumns={{
@@ -221,21 +208,21 @@ function BlogPage() {
               xl: "2fr 1fr",
             }} gap="64px 96px">
               <Stack>
-                <chakra.h3 mt="40px" fontSize="18px" fontFamily="PingFangSC-Semibold" color="hsl(333deg,100%,45%)">最近发布</chakra.h3>
+                <chakra.h3 mt="40px" fontSize="18px" fontFamily="PingFangSC-Semibold" color={gtext}>最近发布</chakra.h3>
                 <Divider orientation="horizontal" mt="0!important" />
                 <Box h="36px" w="36px" mt="0px!important"/>
-                {postsPages.map((post, i) =><Preview key={i} post={post} />)}
+                {postsPages.map((post, i) =><Preview key={i} post={post} colorMode={colorMode}/>)}
               </Stack>
               <Stack fontFamily="PingFangSC-Semibold">
                 <Box mt="40px" >
-                  <chakra.h3 fontSize="18px" color="hsl(333deg,100%,45%)">热门分类</chakra.h3>
+                  <chakra.h3 fontSize="18px" color={gtext}>热门分类</chakra.h3>
                   <Divider orientation="horizontal" />
                   <Box mt="37px">
                     {tags.map((tag, i) => <Cotagray key={i} tag={tag}/>)}
                   </Box>
                 </Box>
                 <Box mt="40px!important">
-                  <chakra.h3 fontSize="18px" color="hsl(333deg,100%,45%)">最受欢迎的内容</chakra.h3>
+                  <chakra.h3 fontSize="18px" color={gtext}>最受欢迎的内容</chakra.h3>
                   <Divider orientation="horizontal" mt="0!important" />
                   <Box pt="32px">
                     <chakra.ul fontSize="19px" listStyleType="none">

@@ -18,13 +18,13 @@ function HomePage() {
         title="lee blog"
         description="hahaha"
       />
-      <Header/>
+      <Header fixed={false}/>
       <Container>
         <Box pt={3} mt="4.5rem" mx="32px" maxW="1100px">
             
         </Box>
-        <Footer />
       </Container>
+      <Footer />
     </>
   )
 }

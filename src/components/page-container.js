@@ -19,8 +19,8 @@ const PageContainer = ({
   return (
     <>
       <SEO title={title} description={description} />
-      <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink>
-      <Header />
+      {/** <SkipNavLink zIndex={20}>Skip to Content</SkipNavLink> */}
+      <Header fixed="absolute"/>
       <Container>
         <Flex>
           
@@ -47,11 +47,11 @@ const PageContainer = ({
               <Box mt="40px">{editUrl && <EditPageLink href={editUrl} />}</Box>
               {pagination || null}
             </Box>
-            <Footer />
           </div>
           {sidebar || null}
         </Flex>
       </Container>
+      <Footer />
     </>
   )
 }

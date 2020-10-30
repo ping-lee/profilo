@@ -187,7 +187,7 @@ import BgWave from '../svgs/bg-wave.svg'
 
 function BlogPage() {
   const { colorMode } = useColorMode()
-  const hbg = useColorModeValue("hsl(204deg,67%,85%)", "hsla(200deg,100%,85%,0.1)")
+  const hbg = useColorModeValue("hsl(204deg,67%,85%)", "#171923")
   const gtext = useColorModeValue("hsl(333deg,100%,45%)", "hsl(230deg,92%,63%)")
   let tags = ["SQL", "维杀杀杀护", "SQL", "维杀杀杀护", "SQ地点L", "维地点护", "SQ达到顶峰L", "维实打实大苏打护"]
   return (
@@ -196,7 +196,7 @@ function BlogPage() {
         title="lee blog"
         description="hahaha"
       />
-      <Header/>
+      <Header fixed="fixed"/>
       <Stack position="relative" w="100%" mt="4.5rem">
         <Box w={{base: "100%", md: "100%", xl: "100%"}} h="100px" background={hbg}></Box>
         <BgWave style={{bottom: '0px', marginTop: colorMode=='dark'?"0px":"-1px", fill: hbg}} />
@@ -236,8 +236,9 @@ function BlogPage() {
               
           </Grid>
         </Box>
-        <Footer />
+        
       </Container>
+      <Footer />
     </>
   )
 }

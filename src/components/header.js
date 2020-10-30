@@ -126,10 +126,10 @@ import NavLink from "./header-nav-link"
   
   const Header = (props) => {
     //const bg = useColorModeValue("white", "gray.800")
-    const hbg = useColorModeValue("hsl(204deg,67%,85%)", "hsla(200deg,100%,85%,0.1)")
+    const hbg = useColorModeValue("hsl(204deg,67%,85%)", "#171923")
     return (
       <chakra.header
-        pos="fixed"
+        pos={props.fixed=='fixed'?"fixed":"absolute"}
         top="0"
         zIndex="1"
         bg={hbg}

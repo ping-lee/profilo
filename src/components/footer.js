@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Icon, Text, Stack, Link, chakra } from "@chakra-ui/core"
+import { Box, Icon, Text, Stack, Link, useColorModeValue } from "@chakra-ui/core"
 import { FaGithub, FaQq } from "react-icons/fa"
 import { SiWechat } from "react-icons/si"
 import { GrMail } from "react-icons/gr"
@@ -32,17 +32,20 @@ const links = [
     href: "mailto:muzilideli@gmail.com",
   },
 ]
-export const Footer = () => (
-  <Box as="footer" mt={12} textAlign="center">
-    <Text fontSize="md">
-      <span>2020 - lee ping</span>
-    </Text>
-    <Stack mt={4} direction="row" spacing="12px" justify="center">
-      {links.map((link) => (
-        <FooterLink key={link.href} {...link} />
-      ))}
-    </Stack>
-  </Box>
-)
+export const Footer = () => {
+  const hbg = useColorModeValue("hsl(204deg,67%,85%)", "#171923")
+  return (
+    <Box as="footer" mt={12} textAlign="center" bg={hbg} padding="32px" >
+      <Text fontSize="md">
+        <span>2020 - lee ping</span>
+      </Text>
+      <Stack mt={4} direction="row" spacing="12px" justify="center">
+        {links.map((link) => (
+          <FooterLink key={link.href} {...link} />
+        ))}
+      </Stack>
+    </Box>
+  )
+}
 
 export default Footer

@@ -199,7 +199,7 @@ function BlogPage() {
       <Header/>
       <Stack position="relative" w="100%" mt="4.5rem">
         <Box w={{base: "100%", md: "100%", xl: "100%"}} h="100px" background={hbg}></Box>
-        <BgWave style={{bottom: '0px', marginTop: "-1px", fill: hbg}} />
+        <BgWave style={{bottom: '0px', marginTop: colorMode=='dark'?"0px":"-1px", fill: hbg}} />
       </Stack>
       <Container>
         <Box pt={3} mt="4.5rem" mx="32px" maxW="1100px">

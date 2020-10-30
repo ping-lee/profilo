@@ -64,7 +64,7 @@ const PreviewLink = styled.a`
     }
 
     .c0-title {
-      color: ${props => props.colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg,100%,60%)"} ;
+      color: ${props => props.colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg,100%,60%)"};
     }
   }
 
@@ -112,7 +112,7 @@ const CotagrayLink = styled.a`
   display: inline-block;
   text-decoration: none;
   font-size: 13px;
-  color: hsl(225deg, 15%, 15%);
+  color:  ${props => props.colorMode == 'dark' ? "hsl(0deg,0%,100%)" : "hsl(225deg, 15%, 15%)"};
   padding: 3px 12px;
   margin-right: 8px;
   margin-bottom: 8px;
@@ -139,15 +139,15 @@ const HoldBkgrd = styled.div`
   right: 0px;
   bottom: 0px;
   border-radius: 8px;
-  background-color: hsl(200deg, 75%, 65%);
+  background-color: ${props => props.colorMode == 'dark' ? "hsl(200deg,50%,60%)" : "hsl(200deg, 75%, 65%)"};
   transform-origin: center center;
 
   
 `
-const Cotagray = ({tag}) => (
+const Cotagray = ({tag, colorMode}) => (
   <CotagrayLink>
     <HoldBkgrd className="hbkg" />
-    <Text>{tag}</Text>
+    <Text color={colorMode == 'dark' ? "rgba(255,255,255,0.92)" : "hsl(225deg, 15%, 15%)"}>{tag}</Text>
   </CotagrayLink>
 )
 const PopuLink = styled.li`
@@ -173,10 +173,10 @@ const PopSpan = styled.span`
   padding-right: 16px;
   padding-top: 0px;
 `
-const PopContent = ({ pop }) => (
+const PopContent = ({ pop, colorMode }) => (
   <PopuLink>
     <PopSpan className="pop-c1">
-      <Icon as={MdArrowForward} color="hsl(245deg,100%,60%)" />
+      <Icon as={MdArrowForward} color={colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg,100%,60%)"}/>
     </PopSpan>
     <chakra.a>{pop.subtitle}</chakra.a>
   </PopuLink>
@@ -198,8 +198,8 @@ function BlogPage() {
       />
       <Header/>
       <Stack position="relative" w="100%" mt="4.5rem">
-        <Box w={{base: "100%", md: "100%", xl: "100%"}} h="120px" background={hbg}>something here</Box>
-        <BgWave style={{bottom: '0px', marginTop: "0px", fill: hbg}} />
+        <Box w={{base: "100%", md: "100%", xl: "100%"}} h="100px" background={hbg}></Box>
+        <BgWave style={{bottom: '0px', marginTop: "-1px", fill: hbg}} />
       </Stack>
       <Container>
         <Box pt={3} mt="4.5rem" mx="32px" maxW="1100px">
@@ -218,7 +218,7 @@ function BlogPage() {
                   <chakra.h3 fontSize="18px" color={gtext}>热门分类</chakra.h3>
                   <Divider orientation="horizontal" />
                   <Box mt="37px">
-                    {tags.map((tag, i) => <Cotagray key={i} tag={tag}/>)}
+                    {tags.map((tag, i) => <Cotagray key={i} tag={tag} colorMode={colorMode} />)}
                   </Box>
                 </Box>
                 <Box mt="40px!important">
@@ -226,7 +226,7 @@ function BlogPage() {
                   <Divider orientation="horizontal" mt="0!important" />
                   <Box pt="32px">
                     <chakra.ul fontSize="19px" listStyleType="none">
-                      {postsPages.map((pop, i) => <PopContent key={i} pop={pop} />)}
+                      {postsPages.map((pop, i) => <PopContent key={i} pop={pop} colorMode={colorMode} />)}
                     </chakra.ul>
                     
                   </Box>

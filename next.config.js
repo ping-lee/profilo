@@ -6,6 +6,7 @@ const fromUnixTime = require("date-fns/fromUnixTime")
 const format = require("date-fns/format")
 const { getEditUrl, addLeadingSlash } = require("@docusaurus/utils")
 const { Octokit } = require("@octokit/rest")
+const withImages = require('next-images')
 
 
 const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN })
@@ -130,6 +131,9 @@ const defaultConfig = {
 }
 
 module.exports = withPlugins(
-  [withMdxEnhanced(mdxConfig), ],
+  [
+    [withImages()],
+    [withMdxEnhanced(mdxConfig)],
+  ],
   defaultConfig,
 )

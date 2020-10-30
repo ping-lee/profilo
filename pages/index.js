@@ -18,7 +18,7 @@ function HomePage() {
         title="lee blog"
         description="hahaha"
       />
-      <Header fixed={false}/>
+      <Header fixed=""/>
       <Container>
         <Box pt={3} mt="4.5rem" mx="32px" maxW="1100px">
             

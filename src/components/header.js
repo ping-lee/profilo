@@ -55,7 +55,7 @@ const HeaderContent = () => {
           display={{ base: "none", md: "flex" }}
         >
           <NavLink href="/blog">博客</NavLink>
-          <NavLink href="/photo">图片</NavLink>
+          <NavLink href="/photos">图片</NavLink>
           <NavLink href="/about">关于</NavLink>
           <NavLink href="/contact">联系</NavLink>
         </HStack>
@@ -71,7 +71,7 @@ const HeaderContent = () => {
               </DrawerHeader>
               <DrawerBody>
               <NavLink href="/blog">博客</NavLink>
-              <NavLink href="/photo">图片</NavLink>
+              <NavLink href="/photos">图片</NavLink>
               <NavLink href="/about">关于</NavLink>
               <NavLink href="/contact">联系</NavLink>
               </DrawerBody>

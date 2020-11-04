@@ -4,7 +4,6 @@ import siteConfig from 'configs/site-config'
 import Head from 'next/head'
 import { DefaultSeo } from 'next-seo'
 import FontFace from "@components/font-face"
-import 'react-image-gallery/styles/css/image-gallery.css'
 
 function MyApp({ Component, pageProps }) {
     return (

@@ -183,7 +183,7 @@ const PopContent = ({ pop, colorMode }) => (
 )
 
 //import Cat from '../svgs/cat.svg'
-import BgWave from '../svgs/bg-wave.svg'
+import BgWave from '../contents/svgs/bg-wave.svg'
 
 function BlogPage() {
   const { colorMode } = useColorMode()

@@ -1,7 +1,7 @@
 //import ImageViewer from '@components/image-viewer/viewer'
 import { Box } from '@chakra-ui/core'
 import ImageGallary from '@components/image-viewer/gallary'
-import localImgages from '../contents/photos/*.jpg'
+import localImgages from '../contents/myphotos/*.jpg'
 import Header from "@components/header"
 import SEO from "@components/seo"
 

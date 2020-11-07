@@ -21,7 +21,7 @@ import NextLink from "next/link"
 import React from "react"
 import { FaMoon, FaSun, FaAlignLeft, FaBars } from "react-icons/fa"
 import NavLink from "./header-nav-link"
-import Lee from '../../public/lee-ping.jpg'
+import Lee from '../../public/profile-pic.png'
 
 const HeaderContent = () => {
   const { toggleColorMode: toggleMode } = useColorMode()

@@ -189,7 +189,7 @@ function BlogPage() {
   const { colorMode } = useColorMode()
   const hbg = useColorModeValue("hsl(204deg,67%,85%)", "#171923")
   const gtext = useColorModeValue("hsl(333deg,100%,45%)", "hsl(230deg,92%,63%)")
-  let tags = ["SQL", "维杀杀杀护", "SQL", "维杀杀杀护", "SQ地点L", "维地点护", "SQ达到顶峰L", "维实打实大苏打护"]
+  let tags = ["SQL", "PL\SQL", "Oracle", "日记", "C++", "React", "NodeJS", ".NET"]
   return (
     <>
       <SEO

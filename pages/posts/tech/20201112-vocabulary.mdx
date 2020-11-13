@@ -9,6 +9,7 @@ import { List, ListItem, ListIcon, UnorderedList, Box } from "@chakra-ui/core"
 import { MdCheckCircle, MdSettings } from "react-icons/md"
 import day1 from "@contents/data/day1"
 import day2 from "@contents/data/day2"
+import day3 from "@contents/data/day3"
 
 ## 20201112 Day 1
 <Box mt="20px"></Box>
@@ -22,4 +23,11 @@ import day2 from "@contents/data/day2"
 
 <List spacing={3}>
     {day2.map((x,i) => <ListItem key={i}><ListIcon as={MdCheckCircle} color={x.color||'red.500'} />{x.w}</ListItem>)}
+</List>
+
+## 20201112 Day 3
+<Box mt="20px"></Box>
+
+<List spacing={3}>
+    {day3.map((x,i) => <ListItem key={i}><ListIcon as={MdCheckCircle} color={x.color||'red.500'} />{x.w}</ListItem>)}
 </List>

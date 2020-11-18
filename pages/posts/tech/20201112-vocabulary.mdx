@@ -5,11 +5,13 @@ excerpt: something
 showToc: true
 ---
 
-import { List, ListItem, ListIcon, UnorderedList, Box } from "@chakra-ui/core"
+import { List, ListItem, ListIcon, UnorderedList, Box, Tag, HStack, Flex  } from "@chakra-ui/core"
 import { MdCheckCircle, MdSettings } from "react-icons/md"
 import day1 from "@contents/data/day1"
 import day2 from "@contents/data/day2"
 import day3 from "@contents/data/day3"
+import day4 from "@contents/data/day4"
+import day5 from "@contents/data/day5"
 
 ## 20201112 Day 1
 <Box mt="20px"></Box>
@@ -28,6 +30,21 @@ import day3 from "@contents/data/day3"
 ## 20201112 Day 3
 <Box mt="20px"></Box>
 
-<List spacing={3}>
-    {day3.map((x,i) => <ListItem key={i}><ListIcon as={MdCheckCircle} color={x.color||'red.500'} />{x.w}</ListItem>)}
-</List>
+<Box>
+    {day3.map((x,i) => <Tag  m="2px" key={i}><TagLeftIcon  as={MdCheckCircle} color={x.color||'red.500'} /><TagLabel>{x.w}</TagLabel></Tag >)}
+</Box>
+
+## 20201116 Day 4
+<Box mt="20px"></Box>
+
+<Box>
+    {day4.map((x,i) => <Tag m="2px" key={i}><TagLeftIcon  as={MdCheckCircle} color={x.color||'red.500'} /><TagLabel>{x.w}</TagLabel></Tag >)}
+</Box>
+
+## 20201118 Day 5
+<Box mt="20px"></Box>
+
+<Box>
+    {day5.map((x,i) => <Tag m="2px" key={i}><TagLeftIcon  as={MdCheckCircle} color={x.color||'red.500'} /><TagLabel>{x.w}</TagLabel></Tag >)}
+</Box>
+

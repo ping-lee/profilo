@@ -1,22 +1,28 @@
+require('dotenv').config()
+
 const express = require('express')
 const next = require('next')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 
-const port = parseInt(process.env.PORT, 10) || 80
+const port = parseInt(process.env.PORT, 10) || 3000
 const dev = process.env.NODE_ENV == 'development'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+const books = require('./api/books')
+
 app.prepare().then(() => {
   const server = express()
 
-  server.get('/a', (req, res) => {
-    return res.send('Hello World from /a')
-  })
+  // middleware
+  server.use(bodyParser.json())
+  server.use(bodyParser.urlencoded({extended: true}))
+  server.use(cors())
 
-  server.get('/b', (req, res) => {
-    return app.render(req, res, '/b', req.query)
-  })
-
+  // route
+  server.use('/books', books)
+  
   server.all('*', (req, res) => {
     return handle(req, res)
   })

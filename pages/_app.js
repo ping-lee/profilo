@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
         <>
           <Head>
             <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
+            <meta charSet="utf-8" />
             <meta content="width=device-width, initial-scale=1" name="viewport" />
             <link rel="shortcut icon" type="image/x-icon" sizes="96x96" href="/favicon.ico" />
             <meta name="theme-color" content="#319795" />

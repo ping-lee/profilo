@@ -19,7 +19,7 @@ import {
 import { SearchIcon } from '@chakra-ui/icons'
 import NextLink from "next/link"
 import React from "react"
-import { FaMoon, FaSun, FaAlignLeft, FaBars } from "react-icons/fa"
+import { FaMoon, FaSun, FaBars } from "react-icons/fa"
 import NavLink from "./header-nav-link"
 import Lee from '../../public/profile-pic.png'
 

@@ -1,22 +1,29 @@
 ---
-title: 'Vocabulary 2'
-subtitle: 'log daily vocabulary note'
-excerpt: something
+title: '每日单词（二）'
+subtitle: '单词日记第一部分'
+excerpt: 词汇源于老蒋的绿皮书《老蒋讲词汇词汇串记版》，工分30次，每次89个左右单词量
 showToc: true
 ---
+
 
 import { List, ListItem, ListIcon, UnorderedList, Box, Tag, HStack, Flex  } from "@chakra-ui/core"
 import { MdCheckCircle, MdSettings } from "react-icons/md"
 import MyEditor from '@components/my-editor'
 import day11 from "@contents/data/day11"
+import day12 from "@contents/data/day12"
 
-## 20201124 Day11
+## 20201125 Day11
 <Box mt="20px"></Box>
 
 <Box>
     {day11.map((x,i) => <Tag m="2px" key={i}><TagLeftIcon  as={MdCheckCircle} color={x.color||'red.500'} /><TagLabel>{x.w}</TagLabel></Tag >)}
 </Box>
 
-<MyEditor />
+## 20201125 Day11
+<Box mt="20px"></Box>
+
+<Box>
+    {day12.map((x,i) => <Tag m="2px" key={i}><TagLeftIcon  as={MdCheckCircle} color={x.color||'red.500'} /><TagLabel>{x.w}</TagLabel></Tag >)}
+</Box>
 
 

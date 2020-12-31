@@ -178,7 +178,7 @@ const PopContent = ({ pop, colorMode }) => (
     <PopSpan className="pop-c1">
       <Icon as={MdArrowForward} color={colorMode == 'dark' ? "hsl(333deg,100%,52%)" : "hsl(245deg,100%,60%)"}/>
     </PopSpan>
-    <chakra.a>{pop.subtitle}</chakra.a>
+    <Link href={pop.slug}>{pop.title}</Link>
   </PopuLink>
 )
 

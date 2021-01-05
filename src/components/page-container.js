@@ -34,6 +34,7 @@ const PageContainer = ({
                   mt="0"
                   fontFamily="PingFangSC-Semibold"
                 >{title}</chakra.h1>
+                {subtitle?
                 <chakra.h2 
                   apply="mdx.h2" 
                   textAlign={{base: "left", md: "center", xl: "center"}} 
@@ -41,6 +42,7 @@ const PageContainer = ({
                   fontSize="24px"
                   color="hsl(225deg,15%,50%)"
                 >{subtitle}</chakra.h2>
+                : null}
                 {children}
               </PageTransition>
               <Box mt="40px">{editUrl && <EditPageLink href={editUrl} />}</Box>

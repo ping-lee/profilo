@@ -89,8 +89,8 @@ const Preview = ({ post, colorMode }) => (
         <Box display="block" mb="48px">
           <chakra.article cursor="pointer">
             <chakra.h4 className="c0-title" fontSize="24px" fontFamily="PingFangSC-Semibold">{post.title}</chakra.h4>
-            <chakra.h6 fontSize="19px" color="hsl(225deg,15%,50%)">{post.subtitle}</chakra.h6>
-            <chakra.p fontSize="18px" mt="16px">{post.excerpt}</chakra.p>
+            {post.subtitle?<chakra.h6 fontSize="19px" color="hsl(225deg,15%,50%)">{post.subtitle}</chakra.h6>:null}
+            <chakra.p fontSize="18px" mt={post.subtitle? "16px" : null}>{post.excerpt}</chakra.p>
             <Box w="16px" h="16px" />
             <PreviewMore>
               <Box display="inline-flex" pos="relative" fontSize="18px" alignItems="center" fontFamily="PingFangSC-Semibold">更多</Box>

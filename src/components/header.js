@@ -54,9 +54,9 @@ const HeaderContent = () => {
           ml="24px"
           display={{ base: "none", md: "flex" }}
         >
-          <NavLink >图片</NavLink>
-          <NavLink >关于</NavLink>
-          <NavLink >联系</NavLink>
+          <NavLink href="/blog" >图片</NavLink>
+          <NavLink href="/blog" >关于</NavLink>
+          <NavLink href="/blog" >联系</NavLink>
         </HStack>
         <Drawer placement="left" onClose={onClose} isOpen={isOpen} size="xs">
           <DrawerOverlay>
@@ -69,9 +69,9 @@ const HeaderContent = () => {
                 </HStack>
               </DrawerHeader>
               <DrawerBody>
-              <NavLink >图片</NavLink>
-              <NavLink >关于</NavLink>
-              <NavLink >联系</NavLink>
+              <NavLink href="/blog" >图片</NavLink>
+              <NavLink href="/blog" >关于</NavLink>
+              <NavLink href="/blog" >联系</NavLink>
               </DrawerBody>
             </DrawerContent>
           </DrawerOverlay>
